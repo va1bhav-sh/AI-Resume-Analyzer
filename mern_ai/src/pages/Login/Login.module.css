@@ -1,0 +1,129 @@
+.loginOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 24px;
+
+  background: rgba(255, 255, 255, 0.35);
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.loginCard {
+  width: min(580px, 100%);
+  padding: 34px 24px;
+
+  border-radius: 24px;
+
+  background: #000;
+  color: white;
+
+  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.3);
+}
+
+.titleRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 28px;
+  padding: 0 4px;
+}
+
+.titleRow h1 {
+  margin: 0;
+
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.googleButton {
+  width: 100%;
+  height: 76px;
+
+  border: none;
+  border-radius: 40px;
+
+  background: white;
+  color: #111;
+
+  font-size: 20px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.googleButton:hover:not(:disabled) {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 10px 30px rgba(255, 255, 255, 0.15);
+}
+
+.googleButton:disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.googleIcon {
+  font-size: 25px;
+  font-weight: 700;
+  color: #4285f4;
+}
+
+.spinner {
+  animation: spin 1s linear infinite;
+}
+
+.error {
+  margin: 16px 0 0;
+
+  color: #ff7272;
+  text-align: center;
+  font-size: 14px;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 600px) {
+  .loginOverlay {
+    padding: 18px;
+  }
+
+  .loginCard {
+    padding: 26px 20px;
+    border-radius: 20px;
+  }
+
+  .titleRow h1 {
+    font-size: 28px;
+  }
+
+  .googleButton {
+    height: 60px;
+    font-size: 16px;
+  }
+}

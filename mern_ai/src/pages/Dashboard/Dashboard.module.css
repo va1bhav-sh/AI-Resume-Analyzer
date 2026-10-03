@@ -1,0 +1,1278 @@
+/* =========================
+   DASHBOARD
+========================= */
+
+.dashboard {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 390px;
+  gap: 22px;
+
+  padding: 22px;
+  box-sizing: border-box;
+
+  background: #e9edf5;
+}
+
+
+/* =========================
+   MAIN PANEL
+========================= */
+
+.mainSection {
+  min-width: 0;
+  height: fit-content;
+  align-self: start;
+
+  background: #ffffff;
+  border-radius: 28px;
+
+  padding: 34px 40px;
+  box-sizing: border-box;
+
+  border: 1px solid #e3e7ef;
+
+  box-shadow:
+    0 15px 40px rgba(30, 41, 59, 0.08);
+
+  overflow: hidden;
+}
+
+
+/* =========================
+   TITLE
+========================= */
+
+.subtitle {
+  margin: 0 0 5px;
+
+  color: #6366f1;
+
+  font-size: 17px;
+  font-weight: 700;
+
+  letter-spacing: 0.2px;
+}
+
+.mainSection h1 {
+  margin: 0 0 28px;
+
+  color: #111827;
+
+  font-size: 46px;
+  font-weight: 700;
+
+  letter-spacing: -1.5px;
+  line-height: 1.15;
+}
+
+
+/* =========================
+   INSTRUCTIONS
+========================= */
+
+.instructions {
+  position: relative;
+
+  background: #f8f9ff;
+
+  padding: 18px 22px;
+
+  border-radius: 18px;
+
+  border: 1px solid #e4e7ff;
+
+  margin-bottom: 26px;
+
+  box-sizing: border-box;
+}
+
+.instructions::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: 12px;
+  bottom: 12px;
+
+  width: 4px;
+
+  border-radius: 10px;
+
+  background: linear-gradient(
+    180deg,
+    #6366f1,
+    #8b5cf6
+  );
+}
+
+.instructions h3 {
+  margin: 0 0 8px 8px;
+
+  color: #111827;
+
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.instructions p {
+  margin: 6px 0 6px 8px;
+
+  color: #596273;
+
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+
+/* =========================
+   UPLOAD
+========================= */
+
+.uploadWrapper {
+  margin-top: 0;
+}
+
+
+/* =========================
+   JOB DESCRIPTION
+========================= */
+
+.analysisRow {
+  display: grid;
+
+  grid-template-columns: minmax(0, 1fr) 160px;
+
+  gap: 24px;
+
+  align-items: center;
+
+  margin-top: 22px;
+}
+
+.jobDescription {
+  width: 100%;
+  min-height: 205px;
+
+  padding: 18px 20px;
+
+  box-sizing: border-box;
+
+  background: #fafbff;
+
+  border: 1px solid #dfe3ee;
+
+  border-radius: 18px;
+
+  resize: none;
+
+  color: #111827;
+
+  font-family: inherit;
+  font-size: 15px;
+  line-height: 1.6;
+
+  outline: none;
+
+  box-shadow:
+    inset 0 1px 2px rgba(15, 23, 42, 0.02);
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.jobDescription::placeholder {
+  color: #8b93a3;
+}
+
+.jobDescription:focus {
+  background: #ffffff;
+
+  border-color: #6366f1;
+
+  box-shadow:
+    0 0 0 4px rgba(99, 102, 241, 0.10);
+}
+
+
+/* =========================
+   ANALYZE BUTTON
+========================= */
+.analyzeButton {
+  width: 150px;
+  height: 62px;
+
+  justify-self: center;
+
+  border: none;
+  outline: none;
+
+  border-radius: 18px;
+
+  background: linear-gradient(
+    135deg,
+    #ffb13b 0%,
+    #ff7a52 48%,
+    #ff4f70 100%
+  );
+
+  color: #ffffff;
+
+  font-size: 17px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 10px 22px rgba(255, 79, 112, 0.22);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.analyzeButton:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 15px 28px rgba(255, 79, 112, 0.30);
+}
+
+.analyzeButton:active {
+  transform: translateY(0);
+}
+
+.analyzeButton:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+
+/* =========================
+   RIGHT COLUMN
+========================= */
+
+.rightSection {
+  width: 100%;
+  height: calc(100vh - 44px);
+
+  min-width: 0;
+  min-height: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 16px;
+}
+
+
+/* =========================
+   SMALL PROFILE CARD
+========================= */
+
+.profileCard {
+  position: relative;
+  overflow: hidden;
+
+  width: 100%;
+  height: 104px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+
+  padding: 14px 18px;
+
+  box-sizing: border-box;
+
+  background:
+    linear-gradient(
+      145deg,
+      #ffffff 0%,
+      #f5f6ff 100%
+    );
+
+  border-radius: 22px;
+
+  border: 1px solid #e3e6f4;
+
+  box-shadow:
+    0 12px 30px rgba(30, 41, 59, 0.07);
+}
+
+.profileCard::before {
+  content: "";
+
+  position: absolute;
+
+  width: 120px;
+  height: 120px;
+
+  top: -70px;
+  right: -50px;
+
+  border-radius: 50%;
+
+  background: #6366f1;
+
+  opacity: 0.07;
+}
+
+
+/* Profile title */
+
+.profileCard h2 {
+  position: absolute;
+
+  top: 14px;
+  right: 18px;
+
+  margin: 0;
+
+  color: #667085;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 0.4px;
+
+  text-transform: uppercase;
+}
+
+
+/* Small avatar */
+
+.profileAvatar {
+  position: relative;
+
+  width: 62px;
+  height: 62px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  border-radius: 50%;
+
+  background:
+    linear-gradient(
+      135deg,
+      #6366f1,
+      #8b5cf6
+    );
+
+  color: white;
+
+  font-size: 22px;
+  font-weight: 700;
+
+  box-shadow:
+    0 8px 18px rgba(99, 102, 241, 0.20);
+}
+
+.profileImage {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  border-radius: 50%;
+}
+
+
+/* Profile name */
+
+.profileCard h3 {
+  position: relative;
+
+  margin: 0 0 0 14px;
+
+  color: #111827;
+
+  font-size: 18px;
+  font-weight: 700;
+}
+
+
+/* =========================
+   RESULT CARD
+========================= */
+
+.resultCard {
+  width: 100%;
+
+  flex: 1;
+
+  min-height: 0;
+
+  background: #ffffff;
+
+  border-radius: 22px;
+
+  border: 1px solid #e1e5ef;
+
+  box-shadow:
+    0 12px 30px rgba(40, 50, 90, 0.08);
+
+  overflow: hidden;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================
+   READY STATE
+========================= */
+
+.readyState {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  padding: 30px;
+
+  box-sizing: border-box;
+}
+
+.readyIcon {
+  width: 64px;
+  height: 64px;
+
+  margin-bottom: 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 18px;
+
+  background: #eef0ff;
+
+  font-size: 27px;
+
+  box-shadow:
+    0 8px 20px rgba(99, 102, 241, 0.08);
+}
+
+.readyState h2 {
+  margin: 0 0 10px;
+
+  color: #111827;
+
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.readyState p {
+  max-width: 260px;
+
+  margin: 0;
+
+  color: #727b8c;
+
+  font-size: 14px;
+
+  line-height: 1.6;
+}
+
+
+/* =========================
+   PROCESSING
+========================= */
+
+.processing {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  padding: 30px;
+
+  box-sizing: border-box;
+}
+
+.spinner {
+  width: 64px;
+  height: 64px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 18px;
+
+  background: #eef0ff;
+
+  font-size: 27px;
+
+  animation: pulse 1.2s infinite;
+}
+
+.processing h2 {
+  margin: 18px 0 10px;
+
+  color: #111827;
+
+  font-size: 21px;
+}
+
+.processing p {
+  max-width: 280px;
+
+  margin: 0;
+
+  color: #727b8c;
+
+  font-size: 14px;
+
+  line-height: 1.6;
+}
+
+
+/* =========================
+   LOADING DOTS
+========================= */
+
+.loadingDots {
+  display: flex;
+
+  justify-content: center;
+
+  gap: 6px;
+
+  margin-top: 22px;
+}
+
+.loadingDots span {
+  width: 8px;
+  height: 8px;
+
+  background: #6366f1;
+
+  border-radius: 50%;
+
+  animation: loading 1.2s infinite;
+}
+
+.loadingDots span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.loadingDots span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+
+/* =========================
+   RESULT CONTENT
+========================= */
+
+.result {
+  width: 100%;
+  height: 100%;
+
+  overflow-y: auto;
+
+  padding: 24px;
+
+  box-sizing: border-box;
+}
+
+
+/* Result scrollbar */
+
+.result::-webkit-scrollbar {
+  width: 6px;
+}
+
+.result::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.result::-webkit-scrollbar-thumb {
+  background: #d2d6e0;
+  border-radius: 10px;
+}
+
+.result::-webkit-scrollbar-thumb:hover {
+  background: #b9bfcc;
+}
+
+
+/* Result title */
+
+.result h2 {
+  margin: 0 0 18px;
+
+  color: #111827;
+
+  font-size: 22px;
+  font-weight: 700;
+}
+
+
+/* =========================
+   SCORE
+========================= */
+
+.score {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 18px 20px;
+
+  margin-bottom: 22px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #f7f7ff,
+      #f4f5ff
+    );
+
+  border: 1px solid #e4e6f5;
+
+  border-radius: 18px;
+}
+
+.score > span {
+  font-size: 42px;
+
+  font-weight: 800;
+
+  line-height: 1;
+
+  color: #111827;
+}
+
+
+/* Score bars */
+
+.scoreBars {
+  display: flex;
+
+  align-items: flex-end;
+
+  gap: 5px;
+
+  height: 40px;
+}
+
+.scoreBars span {
+  width: 7px;
+
+  background: #ffae00;
+
+  border-radius: 4px;
+}
+
+.scoreBars span:nth-child(1) {
+  height: 16px;
+}
+
+.scoreBars span:nth-child(2) {
+  height: 27px;
+}
+
+.scoreBars span:nth-child(3) {
+  height: 40px;
+}
+
+
+/* =========================
+   RESULT HEADINGS
+========================= */
+
+.result h3 {
+  margin: 20px 0 8px;
+
+  color: #111827;
+
+  font-size: 16px;
+
+  font-weight: 700;
+}
+
+.result p {
+  margin: 0;
+
+  color: #596273;
+
+  font-size: 14px;
+
+  line-height: 1.6;
+}
+
+.result ul {
+  margin: 8px 0 0;
+
+  padding-left: 20px;
+}
+
+.result li {
+  margin-bottom: 6px;
+
+  color: #596273;
+
+  font-size: 14px;
+
+  line-height: 1.5;
+}
+
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(1.08);
+    opacity: 0.65;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes loading {
+  0% {
+    transform: translateY(0);
+    opacity: 0.35;
+  }
+
+  50% {
+    transform: translateY(-5px);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 0.35;
+  }
+}
+/* =========================
+   WHAT YOU'LL GET
+========================= */
+
+.featuresSection {
+  margin-top: 28px;
+}
+
+.featuresHeader {
+  margin-bottom: 14px;
+}
+
+.featuresHeader h3 {
+  margin: 0 0 4px;
+
+  color: #111827;
+
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.featuresHeader p {
+  margin: 0;
+
+  color: #7a8394;
+
+  font-size: 13px;
+}
+
+
+/* =========================
+   FEATURE CARDS
+========================= */
+
+.featureCards {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 12px;
+}
+
+.featureCard {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 11px;
+
+  min-width: 0;
+
+  padding: 15px;
+
+  background: #f8f9ff;
+
+  border: 1px solid #e5e8f3;
+
+  border-radius: 16px;
+
+  box-sizing: border-box;
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.featureCard:hover {
+  transform: translateY(-2px);
+
+  border-color: #d7d9ff;
+
+  box-shadow:
+    0 8px 20px rgba(99, 102, 241, 0.08);
+}
+
+
+/* =========================
+   FEATURE ICON
+========================= */
+
+.featureIcon {
+  width: 36px;
+  height: 36px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+
+  background: #eef0ff;
+
+  font-size: 17px;
+}
+
+
+/* =========================
+   FEATURE TEXT
+========================= */
+
+.featureCard h4 {
+  margin: 1px 0 5px;
+
+  color: #111827;
+
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.featureCard p {
+  margin: 0;
+
+  color: #737d90;
+
+  font-size: 11.5px;
+
+  line-height: 1.45;
+}
+/* =========================
+   AI FEATURE CONTENT
+========================= */
+
+.featureContent {
+  min-width: 0;
+}
+
+.featureValue {
+  display: block;
+
+  margin: 2px 0 4px;
+
+  color: #111827;
+
+  font-size: 22px;
+  font-weight: 800;
+
+  line-height: 1;
+}
+
+.featureContent p {
+  margin: 4px 0 0;
+
+  color: #737d90;
+
+  font-size: 11.5px;
+
+  line-height: 1.45;
+}
+
+/* =========================
+   LARGE SCREENS
+========================= */
+
+@media (min-width: 1400px) {
+  .dashboard {
+    grid-template-columns: minmax(0, 1fr) 400px;
+  }
+
+  .mainSection {
+    padding: 36px 42px;
+  }
+
+  .mainSection h1 {
+    font-size: 48px;
+  }
+}
+
+
+/* =========================
+   MEDIUM DESKTOP
+========================= */
+
+@media (max-width: 1200px) {
+  .dashboard {
+    grid-template-columns: minmax(0, 1fr) 340px;
+
+    gap: 18px;
+
+    padding: 18px;
+  }
+
+  .mainSection {
+    height: fit-content;
+
+    padding: 30px;
+  }
+
+  .rightSection {
+    height: calc(100vh - 36px);
+  }
+
+  .mainSection h1 {
+    font-size: 40px;
+  }
+
+  .analysisRow {
+    grid-template-columns: minmax(0, 1fr) 145px;
+
+    gap: 20px;
+  }
+
+  .analyzeButton {
+    width: 135px;
+    height: 58px;
+
+    font-size: 16px;
+  }
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+  .dashboard {
+    grid-template-columns: 1fr;
+
+    height: 100vh;
+    overflow: hidden;
+
+    padding: 16px;
+    gap: 16px;
+  }
+
+  .mainSection {
+    height: 55vh;
+    min-height: 0;
+
+    padding: 26px;
+  }
+
+  .rightSection {
+    height: calc(45vh - 16px);
+
+    min-height: 0;
+  }
+
+  .mainSection h1 {
+    font-size: 36px;
+  }
+
+  .analysisRow {
+    grid-template-columns: minmax(0, 1fr) 130px;
+
+    gap: 18px;
+  }
+
+  .jobDescription {
+    min-height: 145px;
+  }
+
+  .analyzeButton {
+    width: 120px;
+    height: 54px;
+
+    font-size: 15px;
+  }
+
+  .profileCard {
+    height: 90px;
+  }
+
+  .profileAvatar {
+    width: 52px;
+    height: 52px;
+
+    font-size: 20px;
+  }
+
+  .profileCard h3 {
+    font-size: 16px;
+  }
+  .featuresSection {
+  margin-top: 20px;
+}
+
+.featureCards {
+  grid-template-columns: 1fr;
+}
+
+.featureCard {
+  padding: 13px;
+}
+}
+
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+  .dashboard {
+    height: 100vh;
+
+    padding: 12px;
+    gap: 12px;
+
+    overflow: hidden;
+  }
+
+  .mainSection {
+    height: 56vh;
+
+    padding: 22px 18px;
+
+    border-radius: 22px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+  }
+
+  .mainSection h1 {
+    margin-bottom: 20px;
+
+    font-size: 29px;
+    letter-spacing: -1px;
+  }
+
+  .instructions {
+    padding: 15px;
+
+    margin-bottom: 20px;
+
+    border-radius: 16px;
+  }
+
+  .instructions h3 {
+    font-size: 15px;
+  }
+
+  .instructions p {
+    font-size: 12px;
+  }
+
+  .analysisRow {
+    grid-template-columns: 1fr;
+
+    gap: 12px;
+
+    margin-top: 18px;
+  }
+
+  .jobDescription {
+    min-height: 105px;
+
+    padding: 14px;
+
+    font-size: 13px;
+  }
+
+  .analyzeButton {
+    width: 100%;
+    height: 52px;
+
+    border-radius: 15px;
+
+    font-size: 15px;
+
+    justify-self: stretch;
+  }
+
+  .rightSection {
+    height: calc(44vh - 12px);
+
+    gap: 12px;
+  }
+
+  .profileCard {
+    height: 72px;
+
+    padding: 10px 14px;
+
+    border-radius: 18px;
+  }
+
+  .profileCard h2 {
+    display: none;
+  }
+
+  .profileAvatar {
+    width: 48px;
+    height: 48px;
+
+    font-size: 18px;
+  }
+
+  .profileCard h3 {
+    margin-left: 12px;
+
+    font-size: 15px;
+  }
+
+  .resultCard {
+    border-radius: 18px;
+  }
+
+  .result {
+    padding: 18px;
+  }
+
+  .result h2 {
+    font-size: 19px;
+  }
+
+  .score {
+    padding: 14px 16px;
+  }
+
+  .score > span {
+    font-size: 34px;
+  }
+
+  .result h3 {
+    font-size: 15px;
+  }
+
+  .result p,
+  .result li {
+    font-size: 13px;
+  }
+  .featuresSection {
+  margin-top: 16px;
+}
+
+.featuresHeader h3 {
+  font-size: 15px;
+}
+
+.featuresHeader p {
+  font-size: 12px;
+}
+
+.featureCards {
+  gap: 8px;
+}
+
+.featureCard {
+  padding: 11px;
+}
+
+.featureCard p {
+  font-size: 11px;
+}
+}
+
+
+/* =========================
+   VERY SMALL PHONES
+========================= */
+
+@media (max-width: 380px) {
+  .dashboard {
+    padding: 10px;
+  }
+
+  .mainSection {
+    height: 58vh;
+
+    padding: 18px 14px;
+  }
+
+  .mainSection h1 {
+    font-size: 26px;
+  }
+
+  .instructions {
+    padding: 13px;
+  }
+
+  .instructions p {
+    font-size: 11px;
+  }
+
+  .rightSection {
+    height: calc(42vh - 10px);
+  }
+
+  .analyzeButton {
+    width: 100%;
+    height: 50px;
+
+    font-size: 14px;
+  }
+}

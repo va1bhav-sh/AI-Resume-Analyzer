@@ -1,0 +1,239 @@
+.settingsPage {
+  width: 100%;
+  min-height: 100vh;
+  padding: 40px;
+  background: #f5f6fa;
+}
+
+.header {
+  margin-bottom: 30px;
+}
+
+.header h1 {
+  margin: 0;
+  color: #111827;
+  font-size: 38px;
+  font-weight: 700;
+}
+
+.header p {
+  margin: 6px 0 0;
+  color: #6b7280;
+  font-size: 15px;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.card {
+  width: 100%;
+  max-width: 850px;
+  margin-bottom: 22px;
+  padding: 28px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 22px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
+}
+
+/* =========================
+   CARD HEADER
+========================= */
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 28px;
+}
+
+.iconBox {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: #eef0ff;
+  color: #6366f1;
+}
+
+.cardHeader h2 {
+  margin: 0;
+  color: #111827;
+  font-size: 19px;
+}
+
+.cardHeader p {
+  margin: 4px 0 0;
+  color: #7b8494;
+  font-size: 13px;
+}
+
+/* =========================
+   PROFILE
+========================= */
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.avatar {
+  position: relative;
+  width: 82px;
+  height: 82px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: white;
+}
+
+.avatarLetter {
+  position: relative;
+  z-index: 1;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.avatarImage {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.profileInfo h3 {
+  margin: 0 0 9px;
+  color: #111827;
+  font-size: 22px;
+}
+
+.email {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+/* =========================
+   ACCOUNT
+========================= */
+
+.accountRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px;
+  background: #f8f9fc;
+  border-radius: 14px;
+}
+
+.accountRow > div:first-child {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.accountRow strong {
+  color: #111827;
+  font-size: 14px;
+}
+
+.accountRow span {
+  color: #737b8c;
+  font-size: 13px;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #16a34a;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.status span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #22c55e;
+}
+
+/* =========================
+   LOGOUT
+========================= */
+
+.logoutButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  width: 150px;
+  height: 48px;
+  border: none;
+  border-radius: 12px;
+  background: #111827;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.logoutButton:hover {
+  background: #1f2937;
+  transform: translateY(-2px);
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+  .settingsPage {
+    padding: 90px 18px 30px;
+  }
+
+  .header h1 {
+    font-size: 30px;
+  }
+
+  .card {
+    padding: 22px;
+    border-radius: 18px;
+  }
+
+  .profile {
+    gap: 14px;
+  }
+
+  .avatar {
+    width: 65px;
+    height: 65px;
+  }
+
+  .profileInfo h3 {
+    font-size: 18px;
+  }
+
+  .email {
+    font-size: 12px;
+  }
+
+  .accountRow {
+    align-items: flex-start;
+    gap: 15px;
+  }
+}

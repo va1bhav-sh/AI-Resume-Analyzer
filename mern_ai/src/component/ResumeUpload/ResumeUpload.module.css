@@ -1,0 +1,154 @@
+.uploadContainer {
+  display: grid;
+
+  grid-template-columns: minmax(0, 1fr) 255px;
+
+  gap: 45px;
+
+  align-items: center;
+}
+
+
+/* File name box */
+
+.resumeInput {
+  background: white;
+
+  min-height: 65px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 35px;
+
+  border-radius: 35px;
+
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+
+  font-size: 18px;
+
+  cursor: pointer;
+
+  overflow: hidden;
+
+  white-space: nowrap;
+
+  text-overflow: ellipsis;
+
+  transition: 0.2s ease;
+}
+
+.resumeInput:hover {
+  transform: translateY(-2px);
+}
+
+
+/* Upload button */
+
+.uploadButton {
+  border: none !important;
+  outline: none !important;
+
+  width: 270px;
+  height: 68px;
+
+  border-radius: 18px;
+
+  background: linear-gradient(
+    135deg,
+    #ffb13b 0%,
+    #ff7a52 48%,
+    #ff4f70 100%
+  );
+
+  color: #ffffff;
+
+  font-size: 16px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 10px 22px rgba(255, 79, 112, 0.22);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.uploadButton:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 14px 26px rgba(255, 79, 112, 0.28);
+}
+
+.uploadButton:active {
+  transform: translateY(0);
+}
+
+.uploadButton:focus,
+.uploadButton:focus-visible {
+  border: none !important;
+  outline: none !important;
+  box-shadow:
+    0 10px 22px rgba(255, 79, 112, 0.22);
+}
+
+.uploadButton:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  transform: none;
+}
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+  .uploadContainer {
+    grid-template-columns: minmax(0, 1fr) 200px;
+
+    gap: 20px;
+  }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+  .uploadContainer {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+
+    width: 100%;
+  }
+
+  .resumeInput {
+    width: 100%;
+
+    min-height: 58px;
+
+    padding: 0 20px;
+
+    border-radius: 16px;
+
+    font-size: 14px;
+  }
+
+  .uploadButton {
+    width: 100%;
+
+    height: 58px;
+
+    border-radius: 16px;
+
+    font-size: 15px;
+  }
+}
