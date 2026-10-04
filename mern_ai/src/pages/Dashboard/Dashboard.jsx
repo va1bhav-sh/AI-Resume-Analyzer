@@ -6,7 +6,7 @@ import ResumeUpload from "../../component/ResumeUpload/ResumeUpload";
 import api from "../../api/api";
 
 function Dashboard() {
-  const { user } = useAuth();
+  const { user, openLogin } = useAuth();
 
   const [isAnalyzing, setIsAnalyzing] = useState(false);
   const [result, setResult] = useState(null);
@@ -307,8 +307,18 @@ function Dashboard() {
         {/* =========================
             USER PROFILE
         ========================= */}
-
-        <div className={styles.profileCard}>
+        <div
+          className={styles.profileCard}
+          onClick={() => {
+            if (user) {
+              window.location.href = "/settings";
+            } else {
+              openLogin();
+            }
+          }}
+          role="button"
+          tabIndex={0}
+        >
 
           <h2>Analyze With AI</h2>
 

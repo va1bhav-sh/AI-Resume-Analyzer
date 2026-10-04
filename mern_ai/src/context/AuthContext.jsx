@@ -115,6 +115,9 @@ export function AuthProvider({ children }) {
       throw error;
     }
   };
+  const openLogin = () => {
+    setShowLogoutLogin(true);
+  };
 
   const logout = async () => {
     try {
@@ -143,6 +146,7 @@ export function AuthProvider({ children }) {
         loginWithGoogle,
         logout,
         showLogoutLogin,
+        openLogin,
       }}
     >
       {children}
